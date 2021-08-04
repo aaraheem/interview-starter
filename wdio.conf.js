@@ -1,10 +1,7 @@
 exports.config = {
   runner: 'local',
-  specs: [
-    './test/specs/**/*.js'
-  ],
-  exclude: [
-  ],
+  specs: ['./test/specs/**/*.js'],
+  exclude: ['./test/specs/signup/signup.spec.js'],
   maxInstances: 10,
   capabilities: [{
     maxInstances: 5,
@@ -19,6 +16,7 @@ exports.config = {
   connectionRetryCount: 3,
   services: ['chromedriver'],
   framework: 'jasmine',
+  reporters: ['spec'],
   jasmineOpts: {
     defaultTimeoutInterval: 60000
   }
